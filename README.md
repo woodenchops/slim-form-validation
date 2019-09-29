@@ -44,6 +44,19 @@ plugin to detect empty required fields in a contact form
 
  ```
  
+  **CSS positioning offset for error message:**
+  
+  if, for whatever reason, you need to adjust the positioning of the error message, use the below selector
+ 
+ ```CSS
+ 
+ .label.field-empty .err-message {
+    top: 43px;
+    left: 0;
+  }
+ 
+ ```
+ 
  **codepen example:**
 https://codepen.io/Woodenchops/pen/oKxRGq?editors=1010
 
