@@ -30,6 +30,12 @@ function updatedFormVal(props) {
        }
     }
 
+    this.addpseudoEl = function() {
+        $(this._label).each(function() {
+            $(this).append('<span class="err-message"></span>');
+        });
+    }
+
     // add pattern attr to accept only certain values 
     this.addPattern = function() {
         $('.inputField[type="text"]').attr('pattern', '[a-zA-z]{1,15}');
@@ -48,10 +54,13 @@ function updatedFormVal(props) {
       this.checkField(e.target);
     }.bind(this._self));
 
+    // func that will execute any functions on page load
     this.init = function() {
         this.addPattern();
+        this.addpseudoEl();
     }
 
+    // run init func on page load
     this.init();
   }
   
