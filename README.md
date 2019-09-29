@@ -4,6 +4,7 @@ plugin to detect empty required fields in a contact form
 
 # example init
 
+ **markup example:**
 ```
 <form action="" id="myForm">
 <label for="" class="name label">Name</label>
@@ -31,7 +32,7 @@ plugin to detect empty required fields in a contact form
 </form>
 
 ```
-
+ **JavaScript init example:**
 
 ```
   var validateForm = new updatedFormVal({
