@@ -58,7 +58,7 @@ plugin to detect empty required fields in a contact form
  ```
  
  **codepen example:**
-https://codepen.io/Woodenchops/pen/oKxRGq?editors=1010
+https://codepen.io/Woodenchops/pen/PoYveKb
 
  
  - **form** : the form you wish to target
