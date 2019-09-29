@@ -3,8 +3,6 @@ plugin to detect empty required fields in a contact form
 
 
 # example init
-
-Check https://www.noyane.com/ and https://www.baptisteandbottle.com/ for use case implementation (contact form 7)
 ```
   var contactForm = new FormValidate({
     form: "#wpcf7-f563-o1",
