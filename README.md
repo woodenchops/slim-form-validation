@@ -88,6 +88,12 @@ plugin to detect empty required fields in a contact form
     content: "Please enter your Contact number";
   } 
  
+ // to add a new custom message, attach a new class to the label 
+ 
+ .new-class.field-empty .err-message:after {
+    content: "My custom message";
+  } 
+ 
  ```
  
  **codepen example:**
