@@ -4,11 +4,13 @@ plugin to detect empty required fields in a contact form
 
 # example init
 ```
-  var contactForm = new FormValidate({
-    form: "#wpcf7-f563-o1",
-    input: ".wpcf7-validates-as-required", 
-    submit: ".wpcf7-submit"
-   });
+  var validateForm = new updatedFormVal({
+    form: '#myForm', // the form you wish to target
+    label: ".label", // the label element for each input 
+    input: ".inputField", // the input, itself
+    submit: ".mySubmit" // the submit button
+  });
+
  ```
  
  **codepen example:**
