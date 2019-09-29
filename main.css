@@ -45,7 +45,15 @@
   .name.field-empty .err-message:after {
     content: "Please enter your Name";
   }
+
+  .first-name.field-empty .err-message:after {
+    content: "Please enter your first name";
+  }
   
+  .last-name.field-empty .err-message:after {
+    content: "Please enter your last name";
+  }
+
   .email.field-empty .err-message:after {
     content: "Please enter your Email";
   }
