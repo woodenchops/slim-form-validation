@@ -56,6 +56,39 @@ plugin to detect empty required fields in a contact form
   }
  
  ```
+ **Entering the custom error message:**
+ 
+ ```CSS
+ 
+  .name.field-empty .err-message:after {
+    content: "Please enter your Name";
+  }
+
+  .first-name.field-empty .err-message:after {
+    content: "Please enter your first name";
+  }
+  
+  .last-name.field-empty .err-message:after {
+    content: "Please enter your last name";
+  }
+
+  .email.field-empty .err-message:after {
+    content: "Please enter your Email";
+  }
+  
+  .password.field-empty .err-message:after {
+    content: "Please enter your Password";
+  }
+  
+  .number-of-guests.field-empty .err-message:after {
+    content: "Please enter your Number of guests";
+  } 
+  
+  .tel.field-empty .err-message:after {
+    content: "Please enter your Contact number";
+  } 
+ 
+ ```
  
  **codepen example:**
 https://codepen.io/Woodenchops/pen/PoYveKb
