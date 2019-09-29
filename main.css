@@ -3,7 +3,7 @@
     display: block;
   }
   
-  input {
+  .label + input {
     margin: 0 0 2rem 0;
   }
   

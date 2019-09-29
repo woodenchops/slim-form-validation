@@ -29,6 +29,15 @@ function updatedFormVal(props) {
          $(targetInput).prev().removeClass('field-empty');
        }
     }
+
+    // add pattern attr to accept only certain values 
+    this.addPattern = function() {
+        $('.inputField[type="text"]').attr('pattern', '[a-zA-z]{1,15}');
+        $('.inputField[type="email"]').attr('pattern', '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
+        $('.inputField[type="number"]').attr('min', '0');
+        $('.inputField[type="tel"]').attr('pattern', '[0-9]{1, 12}');
+    }
+
     // Show the first empty field if user hovers over submit button
     $(this._submit).on('mouseover', function() {
       this.checkField(this._input[0]);
@@ -38,6 +47,12 @@ function updatedFormVal(props) {
     $(this._input).on('input blur', function(e) {
       this.checkField(e.target);
     }.bind(this._self));
+
+    this.init = function() {
+        this.addPattern();
+    }
+
+    this.init();
   }
   
   var validateForm = new updatedFormVal({
