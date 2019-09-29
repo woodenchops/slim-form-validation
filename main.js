@@ -30,6 +30,7 @@ function updatedFormVal(props) {
        }
     }
 
+    // append span to label
     this.addpseudoEl = function() {
         $(this._label).each(function() {
             $(this).append('<span class="err-message"></span>');

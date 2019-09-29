@@ -7,8 +7,9 @@
     margin: 0 0 2rem 0;
   }
   
-  .label.field-empty:after {
-    content: "";
+  /* updated styles */
+
+  .label.field-empty .err-message {
     position: absolute;
     background: #FAB9B9;
     top: 43px;
@@ -23,39 +24,40 @@
     transition: all .45s ease;
   }
   
-  .label.field-empty:before{
+  .label.field-empty .err-message:before{
     content: "";
     position: absolute;
     background: #FAB9B9;
     width: 10px;
     height: 10px;
     position: absolute;
-    top: 38px;
+    top: -5px;
     left: 6px;
     position: absolute;
     transform: rotate(-45deg);
+    transition: all .45s ease;
   }
   
   .label.field-empty + input {
     border: 1px solid #de5757;
   }
   
-  .name.field-empty:after {
+  .name.field-empty .err-message:after {
     content: "Please enter your Name";
   }
   
-  .email.field-empty:after {
+  .email.field-empty .err-message:after {
     content: "Please enter your Email";
   }
   
-  .password.field-empty:after {
+  .password.field-empty .err-message:after {
     content: "Please enter your Password";
   }
   
-  .number-of-guests.field-empty:after {
+  .number-of-guests.field-empty .err-message:after {
     content: "Please enter your Number of guests";
   } 
   
-  .tel.field-empty:after {
+  .tel.field-empty .err-message:after {
     content: "Please enter your Contact number";
   } 
