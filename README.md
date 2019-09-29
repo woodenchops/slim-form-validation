@@ -3,6 +3,36 @@ plugin to detect empty required fields in a contact form
 
 
 # example init
+
+```
+<form action="" id="myForm">
+<label for="" class="name label">Name</label>
+<input type="text" class="inputField"><br>
+
+<label for="" class="first-name label">First name</label>
+<input type="text" class="inputField"><br>
+
+<label for="" class="last-name label">Last name</label>
+<input type="text" class="inputField"><br>
+
+<label for="" class="email label">Email</label>
+<input type="email" class="inputField"><br>
+
+<label for="" class="password label">Password</label>
+<input type="text" class="inputField"><br>
+
+<label for="" class="number-of-guests label">Number of guests</label>
+<input type="number" class="inputField"><br>
+
+<label for="" class="tel label">Telephone</label>
+<input type="tel" class="inputField"><br>
+
+<input type="submit" class="mySubmit">
+</form>
+
+```
+
+
 ```
   var validateForm = new updatedFormVal({
     form: '#myForm', // the form you wish to target
