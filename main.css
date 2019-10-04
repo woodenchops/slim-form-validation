@@ -15,7 +15,7 @@ margin: 0 0 5rem 0;
 .label.field-empty .err-message {
 position: absolute;
 background: #FAB9B9;
-top: 43px;
+top: 66px;
 left: 0;
 color: #001f39;
 padding: 0.3125rem 0.625rem;
@@ -51,7 +51,8 @@ opacity: .5 !important;
 }
 
 .label.field-empty + input {
-border: 1px solid #de5757;
+/* border: 1px solid #de5757; */
+outline-color: #FAB9B9;
 }
 
 .name.field-empty .err-message:after {
@@ -81,3 +82,28 @@ content: "Please enter your Number of guests";
 .tel.field-empty .err-message:after {
 content: "Please enter your Contact number";
 } 
+
+/* form specific styles  */
+body,html {
+    background: #292b2f;
+    font-family: sans-serif;
+    color: #fff;
+  }
+  
+  input {
+    padding: 10px;
+    border: 3px solid #fff !important;
+    background: none;
+    color: #fff !important;
+  }
+  
+  input[type="submit"] {
+    background: #015496;
+    border: none !important;
+    padding: 10px 20px;
+    display: block;
+  
+    height: 50px;
+    min-width: 120px;
+    font-size: 18px;
+  }
