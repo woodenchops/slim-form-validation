@@ -83,7 +83,7 @@ content: "Please enter your Number of guests";
 content: "Please enter your Contact number";
 } 
 
-/* form specific styles  */
+/* form specific styles -- DELETE EVERYTHING BELOW THIS LINE IN PRODUCTION */
 body,html {
     background: #292b2f;
     font-family: sans-serif;
