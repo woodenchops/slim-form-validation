@@ -12,6 +12,7 @@ function updatedFormVal(props) {
     $(this._input).each(function() {
       if($(this).val().length <= 0) {
         isValid = false;
+        // reduce opacity of submit button with 'faded' class
         $(props.submit).addClass('faded');
       //   disable submit button if field is empty 
         $(props.submit).on('click', function(e) {
@@ -22,18 +23,20 @@ function updatedFormVal(props) {
 
   //   if fields are filled, then re-activate submit button
     if(isValid === true) {
+        // unbind preventDeafult from submit
         $(props.submit).unbind('click');
+        // remove 'faded' class from submit
         $(props.submit).removeClass('faded');
     }
     
   //   display or hide error message on current focused field
     $(targetInput).each(function() {
-      
+      // add or remove 'empty-field' class on inputs if their value is less than 0
       if($(this).val().length <= 0) {
-      $(this).prev().addClass('field-empty');
-     } else {
-       $(this).prev().removeClass('field-empty');
-     }
+        $(this).prev().addClass('field-empty');
+      } else {
+        $(this).prev().removeClass('field-empty');
+      }
       
     });      
   }
