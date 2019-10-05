@@ -90,14 +90,17 @@ Note that every **label** element has a class of ```label``` and also, that ever
     content: "Please enter your Contact number";
   } 
  
- // to add a new custom message, attach a new class to the label 
+ ```
+ 
+ **adding a new error message:**
+ 
+ ```CSS
  
  .new-class.field-empty .err-message:after {
     content: "My custom message";
   } 
  
  ```
- **adding newly created class:**
  
  ```HTML
 
