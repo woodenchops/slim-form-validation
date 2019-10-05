@@ -47,10 +47,6 @@ function updatedFormVal(props) {
       });
   }
 
-  this.disableSubmit = function(e) {
-    e.preventDefault();
-  }
-
   // add pattern attr to accept only certain values 
   this.addPattern = function() {
       $('.inputField[type="text"]').attr('pattern', '[a-zA-z]{1,15}');
