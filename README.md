@@ -99,8 +99,8 @@ plugin to detect empty required fields in a contact form
  
  ```HTML
 
-  <label for="" class="new-class label">Telephone</label>
-  <input type="tel" class="inputField">
+  <label for="" class="new-class label">My New error message</label>
+  <input type="text" class="inputField">
 
 ```
  
