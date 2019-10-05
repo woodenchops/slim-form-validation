@@ -101,7 +101,7 @@ Note that every label element has a class of ```label``` and also, that every in
  
  ```HTML
 
-  <label for="" class="new-class label">My New error message</label>
+  <label for="" class="new-class label">My New input</label>
   <input type="text" class="inputField">
 
 ```
