@@ -4,6 +4,8 @@ plugin to detect empty required fields in a contact form
 
 # example init
 
+Note that every **label** element has a class of ```label``` and also, that every **input** has a class of ```inputField``` - these MUST be added
+
  **markup example:**
 ```HTML
 <form action="" id="myForm">
@@ -88,13 +90,25 @@ plugin to detect empty required fields in a contact form
     content: "Please enter your Contact number";
   } 
  
- // to add a new custom message, attach a new class to the label 
+ ```
+ 
+ **adding a new error message:**
+ 
+ ```CSS
  
  .new-class.field-empty .err-message:after {
     content: "My custom message";
   } 
  
  ```
+ 
+ ```HTML
+
+  <label for="" class="new-class label">My New input</label>
+  <input type="text" class="inputField">
+
+```
+ 
  
  **codepen example:**
 https://codepen.io/Woodenchops/pen/PoYveKb
