@@ -95,6 +95,15 @@ plugin to detect empty required fields in a contact form
   } 
  
  ```
+ **adding newly created class:**
+ 
+ ```HTML
+
+  <label for="" class="new-class label">Telephone</label>
+  <input type="tel" class="inputField">
+
+```
+ 
  
  **codepen example:**
 https://codepen.io/Woodenchops/pen/PoYveKb
