@@ -51,7 +51,6 @@ opacity: .5 !important;
 }
 
 .label.field-empty + input {
-/* border: 1px solid #de5757; */
 outline-color: #FAB9B9;
 }
 
