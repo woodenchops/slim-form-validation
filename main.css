@@ -23,8 +23,10 @@ font-weight: 300;
 font-style: italic;
 letter-spacing: normal;
 text-align: center;
+font-family: Times;
+font-size: 14px;
 pointer-events: none;
-transition: all .45s ease;
+/* transition: all .45s ease; */
 }
 
 .label.field-empty .err-message:before{
