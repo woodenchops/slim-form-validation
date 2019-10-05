@@ -4,6 +4,8 @@ plugin to detect empty required fields in a contact form
 
 # example init
 
+Note that every label element has a class of ```label``` and also, that every input has a class of ```inputField``` - these MUST be added
+
  **markup example:**
 ```HTML
 <form action="" id="myForm">
