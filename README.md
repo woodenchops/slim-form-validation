@@ -6,7 +6,7 @@ plugin to detect empty required fields in a contact form
 
 Note that every **label** element has a class of ```label``` and also, that every **input** has a class of ```inputField``` - these MUST be added.
 
-It is alaso important to note that this script WON'T work if the ```input``` element is INSIDE the ```label``` element 
+It is also important to note that this script WON'T work if the ```input``` element is INSIDE the ```label``` element 
 
 **example**
 
