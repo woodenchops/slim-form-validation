@@ -62,6 +62,9 @@ function updatedFormVal(props) {
          $('html, body').animate({
            scrollTop: $('.field-empty').eq(0).offset().top
          }, 1000);
+         setTimeout(function() {
+            $('.field-empty + input').eq(0).focus();
+         }.bind(this._self));
       };  
   }
 
