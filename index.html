@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Form Validation</title>
+  <link rel="stylesheet" href="./intl.css">
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <h1>Basic Form Validation Check</h1>
 <form action="" id="myForm">
-<label for="" class="name label">Name</label>
-<input type="text" class="inputField"><br>
+  
+<label for="poop" data-for="poop" class="name label">Name</label>
+<input type="text" id="poop" class="inputField"><br>
 
 <label for="" class="first-name label">First name</label>
 <input type="text" class="inputField"><br>
@@ -28,13 +30,15 @@
 <input type="number" class="inputField"><br>
 
 <label for="" class="tel label">Telephone</label>
-<input type="tel" class="inputField"><br>
+<input type="tel" id="phone" class="inputField contact-number"><br>
 
 <input type="submit" class="mySubmit">
 </form>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="./main.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src="./intl-tel-input/js/intlTelInput.min.js"></script>
+<script src="./intl.js"></script>
+<script src="./main.js"></script>
 
 </body>
 </html>

@@ -5,20 +5,22 @@ function updatedFormVal(props) {
   this._submit = this._form.querySelector(props.submit);
   this._self = this;
 
+  // this.loopLabels = function(inputID){
+  //   var label;
+  //   $(props.label).each(function(){
+  //     label = $(this).data('for');
+  //     if( label == inputID ){
+  //       return label;
+  //     }
+  //   }.bind(self))
+  // }
+
+
   // Check if fields are empty
   this.checkField = function(targetInput) {
-    var isValid = true; 
-  //   loop through each field - if one is empty, set isValid to false
-    $(this._input).each(function() {
-      if($(this).val().length <= 0) {
-        isValid = false;
-        $(props.submit).addClass('faded');
-      //   disable submit button if field is empty 
-        $(props.submit).on('click', function() {
-          return false;
-        }.bind(this._self));
-      }
-    });
+    var isValid = this.isValid(); 
+
+    $(props.submit).addClass('faded');
 
   //   if fields are filled, then re-activate submit button
     if(isValid === true) {
@@ -30,14 +32,30 @@ function updatedFormVal(props) {
     
   //   display or hide error message on current focused field
     $(targetInput).each(function() {
-      
+      var inputID = $(this).attr('id');
+      var labelFor = $(this).parents('.label[for='+inputID+']');
+
+      // console.log(labelFor + " / " + inputID);
+
       if($(this).val().length <= 0) {
-      $(this).prev().addClass('field-empty');
-     } else {
-       $(this).prev().removeClass('field-empty');
-     }
+
+        $(this).prev('.label').addClass('field-empty');
+      } else {
+        $(this).prev('.label').removeClass('field-empty');
+      }
       
     });      
+  }
+
+  this.isValid = function(){
+    var isValid = true;
+    //   loop through each field - if one is empty, set isValid to false
+    $(this._input).each(function() {
+      if($(this).val().length <= 0) {
+        isValid = false;
+      }
+    });
+    return isValid;
   }
 
   // append span to label - this span is used within the CSS to create the err message
@@ -52,7 +70,7 @@ function updatedFormVal(props) {
       $('.inputField[type="text"]').attr('pattern', '[a-zA-z]{1,15}');
       $('.inputField[type="email"]').attr('pattern', '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
       $('.inputField[type="number"]').attr('min', '0');
-      $('.inputField[type="tel"]').attr('pattern', '[0-9]{1, 12}');
+      $('.inputField[type="tel"]').attr('pattern', '[0-9]{1,12}');
   }
 
 
@@ -83,6 +101,10 @@ function updatedFormVal(props) {
   this.init = function() {
       this.addPattern();
       this.addpseudoEl();
+
+      $(props.submit).on('click', function() {
+        return this.isValid();
+      }.bind(this._self));
   }
 
   // run init func on page load
