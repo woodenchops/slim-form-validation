@@ -26,6 +26,7 @@ text-align: center;
 font-family: Times;
 font-size: 14px;
 pointer-events: none;
+z-index: 1;
 /* transition: all .45s ease; */ 
 }
 
@@ -108,4 +109,6 @@ body,html {
     height: 50px;
     min-width: 120px;
     font-size: 18px;
+
+    margin-top: 2rem
   }

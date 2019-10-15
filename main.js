@@ -4,17 +4,7 @@ function updatedFormVal(props) {
   this._input = this._form.querySelectorAll(props.input);
   this._submit = this._form.querySelector(props.submit);
   this._self = this;
-
-  // this.loopLabels = function(inputID){
-  //   var label;
-  //   $(props.label).each(function(){
-  //     label = $(this).data('for');
-  //     if( label == inputID ){
-  //       return label;
-  //     }
-  //   }.bind(self))
-  // }
-
+  var self = this;
 
   // Check if fields are empty
   this.checkField = function(targetInput) {
@@ -32,15 +22,24 @@ function updatedFormVal(props) {
     
   //   display or hide error message on current focused field
     $(targetInput).each(function() {
-      var inputID = $(this).attr('id');
-      var labelFor = $(this).parents('.label[for='+inputID+']');
-
-      // console.log(labelFor + " / " + inputID);
 
       if($(this).val().length <= 0) {
 
+        // this is an incredibly hacky way to add the err class to the phone field
+        // fix this shit
+
+        if($(this).hasClass('phone')) {
+          $(this).parents('.intl-tel-input').prev('.label').addClass('field-empty');
+        }
+
         $(this).prev('.label').addClass('field-empty');
+
       } else {
+
+        if($(this).hasClass('phone')) {
+          $(this).parents('.intl-tel-input').prev('.label').removeClass('field-empty');
+        }
+
         $(this).prev('.label').removeClass('field-empty');
       }
       
